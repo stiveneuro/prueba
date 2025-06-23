@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>CyberEdu|Aprende Ciberceguridad</title> 
+        <link rel="stylesheet" href="{% static 'estilo.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="csrf-token" content="{{ csrf_token }}">
+    </head>
+    <body>
+        <div class="login">
+            <button class="cerrar_f" onclick="cerrar_formu()" type="submit">X</button>
+            <form class="login__formulario" id="formulario_identificador">
+                <label class="formulario__tituloCorreo" for="correo">Correo</label>
+                <input class="formulario__correo" type="text" id="correo" name="correo">
+                <label class="formulario__TituloContraseña" for="contraseña">Contraseña</label>
+                <input class="formulario__contraseña" type="password" id="contraseña" name="contraseña">
+                <input class="formulario__ingresar" type="submit" value="INGRESAR"> 
+            </form>
+        </div>
+
+        <div class="register">
+            <button onclick="cerrar_re()">X</button>
+            <form class="formu_re" id="formu_id">
+                <label class="formu_re_tcorreo" for="co_re"> Correo</label>
+                <input class="formu_re_correo" type="text" id="co_re" name="correo_re">
+                <label class="formu_re_tcontra" for="contra_re"> Contraseña</label>
+                <input class="formu_re_contra" type="password" id="contra_re" name="contrasena_re">
+                <input class="formu_re_contra" type="password" id="contra_veri" name="contra_ve_re">
+                <input class="formu_re_registra" type="submit" value="REGISTRARSE">
+            </form>
+        </div>
+        
+        <div class="fondo">
+            <nav class="barra">
+                <ul>
+                    <li onclick="location.reload()" class="barra__logo">
+                        Cybersecurity
+                    </li>
+                    <li>
+                        Iniciar
+                    </li>
+                    <li onclick="window.open('/silabo','_blank')">
+                        Explorar
+                    </li>
+                    <li>
+                        Practicar
+                    </li>
+                    <li onclick="registrar()">
+                        Suscriberse
+                    </li>
+                    <li class="barra__acceder" onclick="login()">
+                        Acceder
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="cuerpo">
+                <section class="cuerpo__seccion">
+                    <div class="seccion__contenedor seccion__contenedor--grupo">
+                        <div  class="contenedor__separador contenedor__separador--titulo"> 
+                            <h1 class="separador__titulo">CyberEdu</h1>
+                        </div>
+                        <div class="contenedor__separador contenedor__separador--image">
+                            <img class="separador__imagen" src="{% static 'hacker.png' %}" title="hacker">
+                        </div>
+                    </div>
+                    <div class="seccion__contenedor seccion__contenedor--boton">
+                        <button type="button" class="contenedor__boton contenedor__boton--open" onclick="window.open('/silabo','_blank')"> <p>OPEN</p></button>
+                        <button onclick="window.close();"  type="button" class="contenedor__boton contenedor__boton--exit"> <p> EXIT</p></button>
+                    </div>
+                </section>
+            </div>
+
+            
+            <div class="secundario">
+                <section class="secundario__seccion secundario__seccion--descripcion">
+                    <img class="descripcion__imagen" src="{% static 'programador.png' %}">
+                    <p class="descripcion__texto">
+                        Conviertete en un profesional de la ciberseguridad con nuestros módulos interactivos y contenidos actualizados.
+                    </p>
+                </section>
+                
+                <section class="secundario__seccion secundario__seccion--conocenos">
+                    <p class="seccion__texto seccion__texto--titulo">Conocenos</p>
+                    <p class="seccion__texto seccion__texto--texto"> La mejor defensa es una buena prevención en ciberseguridad</p>
+                </section>
+            </div>
+
+            <footer class="pie">
+                <a href="">Aviso legal</a>
+                <a href="">Politica de Privacidad</a>
+            </footer>
+        </div>
+
+        <script src="{% static 'script.js' %}" ></script>
+    </body>
+</html>

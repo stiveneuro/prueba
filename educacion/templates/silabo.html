@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Silabo</title>
+        <link rel="stylesheet" href="{% static 'estiloo.css' %}">
+        <link rel="icon" type="image/png" href="{% static 'educacion.png' %}">
+        <meta name="csrf-token" content="{{ csrf_token }}">
+    </head>
+    <body>
+        <div class="principal">
+            <header class="principal__encabezado">
+                <h1 class="encabezado__titulo">CyberEdu</h1>
+                <nav class="encabezado__barra">
+                    <ul>
+                        <li class="barra__logo">
+                            Cybersecurity
+                        </li>
+                        <li>
+                            Iniciar
+                        </li>
+                        <li>
+                            Explorar
+                        </li>
+                        <li>
+                            Practicar
+                        </li>
+                        <li>
+                            Suscriberse
+                        </li>
+                        <li>
+                            Acceder
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="principal__contenido">
+                <nav class="contenido__barra">
+                    <div class="barra__flechaArriba">ꜛ</div>
+                    <ul class="barra__tema">
+                    </ul>          
+                    <div class="barra__flechaAbajo">ꜜ</div>          
+                </nav>
+
+                <article class="contenido__capitulo" >
+                    <div class="capitulo_capitulo">
+                        <div class="capitulo__texto">
+                            
+                        </div>
+                    </div>
+                </article>
+
+                <article class="contenido__modulo">
+                    <div class="modulo__modulo">
+                        <div class="modulo__texto">
+                            
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <footer class="principal__pie">
+            </footer>
+        </div>
+        <script src="{% static 'script_silabo.js' %}"></script>
+    </body>
+</html>

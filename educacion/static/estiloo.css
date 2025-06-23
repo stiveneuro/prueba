@@ -1,0 +1,370 @@
+* {
+    color:white;
+    font-weight:700;
+    font-family:"Roboto";
+    font-size:0;
+    margin:0;
+    padding: 0;
+}
+
+
+body {
+    background-image: url("ciberseguridad.png");
+    margin:0;
+    display:flex;
+    height:100vh;
+    flex-direction:column;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+
+.principal {
+    display:flex;
+    flex-grow:1;
+    justify-content:center;
+    flex-direction:column;
+}
+
+.principal__encabezado {
+    display: flex;
+    flex-grow:1;
+    flex-direction:column;
+    background-color: #121839;
+}
+
+.encabezado__titulo {
+    font-size:100px;
+    text-align:center;
+}
+
+.encabezado__barra {
+    box-sizing:border-box;
+    display:flex;
+}
+
+.encabezado__barra ul {
+    box-sizing:border-box;
+    display:flex;
+    width:100%;
+    height:100%;
+    color:white;
+    flex-direction: row;
+    list-style:none;
+    justify-content:space-between;
+    background-color:#0F1223;
+    padding:12px 20px;
+    margin:0;
+
+}
+
+.encabezado__barra ul li:nth-child(1) {
+    font-size:20px;
+    background-color:white;
+    color:black;
+    width:200px;    
+    flex-shrink:0;
+
+}
+
+.encabezado__barra ul li {
+    text-align:center;
+    height:20px;
+    width:190px;
+    padding:13px;
+    border-radius: 10px;
+    background:rgb(51, 0, 51);
+    transition:transform 0.5s;
+    font-size:18px;    
+    flex-shrink:0;
+
+}
+
+.encabezado__barra ul li:hover {
+    background:rgb(76, 1, 76);
+    cursor:pointer;
+    transform: scale(1.1)
+}
+.encabezado__barra ul li:nth-child(1):hover {
+    background:rgb(255, 255, 255);
+    outline:3px solid red;
+    cursor:pointer;
+    transform: scale(1.1)
+}
+
+.principal__contenido {
+    display:flex;
+    border:2px solid red;
+    background: #e7f5ff;
+    height:400px;
+    flex-grow:1;
+}
+
+.contenido__barra {
+    margin:10px;
+    background-color: #96f2d7;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    border:3px solid rgb(92, 92, 243);
+    border-radius:15px;
+    overflow:hidden;
+    flex-shrink:0; 
+}
+
+.contenido__barra ::-webkit-scrollbar {
+    display:none;
+}
+
+.contenido__barra {
+    scrollbar-width:none
+}
+
+.barra__flechaArriba {
+    text-align:center;
+    background-color:#ffec99;
+    color:black;
+    height:20px;
+    font-size:40px;
+}
+
+.barra__flechaAbajo {
+    text-align:center;
+    background-color:#ffec99;
+    color:black;
+    height:20px;
+    font-size:40px;
+}
+
+.barra__tema {
+    height:300px;
+    list-style:none;
+    margin:5px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    overflow-y: auto;
+    overflow-x:hidden;
+    border-radius:10px;
+}
+
+.barra__tema li {
+    margin-bottom:10px;
+}
+
+
+.tema__circuloG {
+    width:50px;
+    height:50px;
+    background-color:#ffec99;
+    border: 3px solid green ; 
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.circuloG__circuloP{
+    width:35px;
+    height:35px;
+    background-color:#ffec99;
+    border:3px solid green;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:15px;
+    color:#099268;
+}
+
+.tema__circuloG:hover,.tema__circuloG:hover .circuloG__circuloP {
+    border:3px solid orange;
+    cursor:pointer
+} 
+
+.sele_circu div {
+    border:3px solid orange;
+    cursor:pointer
+}
+
+
+.contenido__capitulo {
+    box-sizing: border-box;
+    display: flex;
+    width:600px;
+    background-color:#ebfbee;
+    margin:10px;
+    border:3px solid blue;
+    border-radius:15px;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink:0;
+
+}
+
+.capitulo_capitulo {
+    margin: 40px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 30px;
+    background-color: white;
+    border: 3px solid red;
+}
+
+.capitulo__texto {
+    margin:15px;
+    box-sizing: border-box;
+    flex-grow:1;
+    overflow: auto;
+}
+
+.capitulo__texto *{
+    color:black;
+    text-align: left;
+}
+
+.contenido__capitulo h1,.contenido__capitulo h1 *{
+    font-size:21px;
+}
+
+.contenido__capitulo h2,.contenido__capitulo h2 *{
+    font-size:18px;
+}
+
+.contenido__capitulo ul {
+    padding:15px 15px 15px 25px;
+}
+
+
+.contenido__capitulo ul li {
+    display:flex;
+    align-items:center;
+    margin:0 0 10px 0;
+    list-style:none;
+}
+
+.contenido__capitulo ul li a:first-child {
+    width:20px;
+    height:20px;
+    border:2px solid red;
+    margin-right:10px;
+    border-radius:50%;
+    flex-shrink:0;
+}
+
+.contenido__capitulo ul li a:first-child:hover {
+    background-color: #099268;
+    cursor:pointer;
+}
+
+.contenido__capitulo ul li .texto__contenido {
+    border-radius:20px; 
+    font-size:15px;
+    padding:10px;
+    flex-grow:1;
+    border:2px solid greenyellow;
+    box-sizing: border-box;
+    transition: background-color 0.6s;
+}
+
+.contenido__capitulo ul li .texto__contenido:hover {
+    background-color: rgb(157, 232, 255);
+    cursor:pointer;
+}
+
+.sele_conte {
+    background-color:rgb(157, 232, 255);
+}
+
+
+.contenido__modulo {
+    box-sizing:border-box;
+    width:650px;
+    background-color:#b2f2bb;
+    margin:10px;
+    border:3px solid blue;
+    border-radius:15px;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    flex-shrink:0;
+
+}
+
+.contenido__modulo * {
+    font-size:15px;
+    color:black;
+}
+
+.contenido__modulo li {
+    margin-left:20px;
+    margin-bottom: 7px;
+}
+
+.modulo__modulo {
+    margin:40px;
+    border:3px solid red;
+    border-radius:30px;
+    background-color:white;
+    overflow:hidden;
+    display:flex;
+    flex-grow:1;
+}
+
+.modulo__texto {
+    margin:15px;
+    box-sizing:border-box;
+    overflow:auto;
+    flex-grow:1;
+    padding-right:10px;
+}
+
+.modulo__modulo ::-webkit-scrollbar {
+    width:15px;
+    border-radius:10px;
+    border:3px solid red
+}
+
+.modulo__texto::-webkit-scrollbar-track {
+    background-color:white;
+    border-left:3px solid red;
+    border-right:3px solid red;
+    margin:8px;
+}
+
+.modulo__texto::-webkit-scrollbar-thumb {
+    background-color:rgb(120, 3, 3);
+    border-radius:10px;
+    border:2px solid red;
+    margin:10px
+}
+
+
+.modulo__texto *{
+    text-align:justify;
+}
+
+.modulo__texto h1 * {
+    font-size:21px
+}
+
+.modulo__texto h2 {
+    font-size:18px;
+    margin-bottom:6px;
+}
+.modulo__texto p, .modulo__texto li {
+    font-weight: 200 ;
+}
+
+.modulo__texto li p {
+    font-weight: 200;
+}
+
+.principal__pie {
+    flex-grow:1;
+    font-size:20px;
+    height:50px;
+    background-color: red;
+}

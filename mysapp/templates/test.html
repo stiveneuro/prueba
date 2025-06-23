@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TEST</title>
+        <link rel="stylesheet" href="{% static 'test.css' %}" > 
+    </head>
+    <body>
+            <article class="contenido__fmodulo">
+                <h1><strong>Módulo 1</strong></h1>
+                <h2><strong>Introducción a la Ciberseguridad</strong></h2>
+                <ul class="contenido__modulo" style="display:flex">
+                    <li>¿Qué es la ciberseguridad? <br></li>
+                    <li>Conceptos clave: Amenazas, vulnerabilidades y riesgos.</li>
+                    <li>Importancias de la ciberseguridad informática en la sociedad actual</li>
+                    <li>Principales tipos de ataques cibernéticos (pishing, malware, ransomware, etc.)</li>
+                    <li>Legislación y normativas aplicables: GDPR, ISO 27001, y otros marcos legales.</li>
+                </ul>
+            </article>
+
+            <div class="barra__flechaAbajo">ꜜ</div>          
+        </nav>
+        
+
+        <script>
+            lista=document.getElementsByClassName("contenido__modulo")[0];
+            elemento=lista.querySelectorAll("li");
+            console.log(elemento);
+            elemento.forEach(e => {
+            contenido=e.innerHTML;
+            e.innerHTML="<div class='modulo__prueba'>amigo</div> <div class='modulo__contenido'>amigo</div";
+            })
+        </script>
+    </body>
+</html>
